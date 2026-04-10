@@ -5,7 +5,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.post("/ussd", (req, res) => {
     const { text, sessionId, serviceCode, phoneNumber } = req.body;
-
+app.get("/", (req, res) => {
+    res.send("USSD service is running 🚀");
+});
     let response = "";
 
     // MAIN MENU
